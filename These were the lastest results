@@ -1,0 +1,22 @@
+These were the lastest results :
+
+
+(.venv) genedarocha@Genes-MacBook-Pro IDTest % python CarCheckTest.py --input car_input.txt --output car_output.txt
+Starting the Car Check Test
+Test Failed for AD58 VNF. The value did not match.
+Traceback (most recent call last):
+  File "/Users/genedarocha/IDTest/IDTest/CarCheckTest.py", line 215, in <module>
+    run_test(args.input, args.output)
+  File "/Users/genedarocha/IDTest/IDTest/CarCheckTest.py", line 193, in run_test
+    actual_value = check_the_car_value(reg_number, mileage)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/genedarocha/IDTest/IDTest/CarCheckTest.py", line 105, in check_the_car_value
+    WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.ID, 'EmailAddress')))
+  File "/Users/genedarocha/IDTest/IDTest/.venv/lib/python3.11/site-packages/selenium/webdriver/support/wait.py", line 105, in until
+    raise TimeoutException(message, screen, stacktrace)
+selenium.common.exceptions.TimeoutException: Message: 
+
+- I NEEDED TO ADD MORE CHECKS AND BETTER TIMINGS. 
+- SOMETIMES THE BUTTON TO GET VALUATION WOULD NOT WORK - TIMINGS AGAIN
+- MAYBE I SHOULD HAVE USED CYPRESS OR PLAYRIGHT INSTEAD. - THANKS 
+- WORKED ON 1 TEST BUT ON THE 2ND ONE IN THE LOOP, TIMINGS WERE NOT SO GOOD. 
